@@ -54,7 +54,7 @@ class GWSolver():
 
             self.g_w, self.mu = self.dyson_equation(self.g0_w, 0.0, sigma_w = self.sigma, N_fix = self.N_fix)
 
-            diff = np.max([np.max(np.abs((self.g_w - self.g_w_old)['up'].data)), np.max(np.abs((self.g_w - self.g_w_old)['dn'].data))])
+            diff = np.max([np.max(np.abs((self.g_w - self.g_w_old)[self.blocks[0]].data)), np.max(np.abs((self.g_w - self.g_w_old)[self.blocks[1]].data))])
             self.g_w_old = self.g_w.copy()
 
             if diff < self.tol:
