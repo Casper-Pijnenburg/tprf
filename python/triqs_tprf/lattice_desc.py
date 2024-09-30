@@ -1751,5 +1751,30 @@ module.add_function ("gf<triqs::mesh::imfreq, tensor_valued<4>> triqs_tprf::chiq
 module.add_function ("triqs_tprf::chi_wk_t triqs_tprf::attatch_tri_vert (triqs_tprf::chi_nn_cvt L_wn, triqs_tprf::chi_kwnn_cvt chi_kwnn)", doc = r"""""")
 
 
+#############################################################################
+
+
+module.add_function ("triqs_tprf::b_g_Dw_t polarization(triqs_tprf::b_g_Dw_cvt g_w, dlr_imfreq iw_mesh_b)", doc = r"""""")
+
+module.add_function ("triqs_tprf::b_g_Dw_t screened_potential(triqs_tprf::b_g_Dw_t P, matrix<double> V, bool self_interactions)", doc = r"""""")
+
+module.add_function ("triqs_tprf::b_g_Dw_t dyn_self_energy(triqs_tprf::b_g_Dw_t G, triqs_tprf::b_g_Dw_cvt W, matrix<double> V, bool self_interactions)", doc = r"""""")
+
+module.add_function ("triqs_tprf::b_g_Dw_t hartree_self_energy(triqs_tprf::b_g_Dw_t G, matrix<double> V, bool self_interactions)", doc = r"""""")
+
+module.add_function ("triqs_tprf::b_g_Dw_t fock_self_energy(triqs_tprf::b_g_Dw_t G, matrix<double> V, bool self_interactions)", doc = r"""""")
+
+
+module.add_function ("triqs_tprf::b_g_Dt_t iw_to_tau(triqs_tprf::b_g_Dw_cvt g_w);", doc = r"""""")
+module.add_function ("triqs_tprf::b_g_Dw_t tau_to_iw(triqs_tprf::b_g_Dt_cvt g_t);", doc = r"""""")
+
+module.add_function ("triqs_tprf::b_g_Dw_t dyson_mu(triqs_tprf::b_g_Dw_t g_w, double mu);", doc = r"""""")
+module.add_function ("triqs_tprf::b_g_Dw_t dyson_mu_sigma(triqs_tprf::b_g_Dw_t g_w, double mu, triqs_tprf::b_g_Dw_t sigma_w);", doc = r"""""")
+
+module.add_function ("double total_density(triqs_tprf::b_g_Dw_t g_w);", doc = r"""""")
+
+module.add_function ("triqs_tprf::g_Dw_t inv(triqs_tprf::g_Dw_t g_w);", doc = r"""""")
+
+
 
 module.generate_code()
