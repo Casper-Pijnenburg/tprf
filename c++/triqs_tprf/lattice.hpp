@@ -35,3 +35,4 @@
 #include "./lattice/chi_imtime.hpp"
 #include "./lattice/chi_imfreq.hpp"
 
+#include "./lattice/gw_realspace.hpp"
