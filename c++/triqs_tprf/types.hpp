@@ -286,6 +286,19 @@ typedef b_g2_iw_t::const_view_type b_g2_iw_cvt;
 typedef block_gf<imfreq, matrix_valued> b_g_iw_t;
 typedef b_g_iw_t::view_type b_g_iw_vt;  
 typedef b_g_iw_t::const_view_type b_g_iw_cvt;
+
+typedef block_gf<imtime, matrix_valued> b_g_t_t;
+typedef b_g_t_t::view_type b_g_t_vt;  
+typedef b_g_t_t::const_view_type b_g_t_cvt;
+
+
+typedef block_gf<dlr_imfreq, matrix_valued> b_g_Dw_t;
+typedef b_g_Dw_t::view_type b_g_Dw_vt;  
+typedef b_g_Dw_t::const_view_type b_g_Dw_cvt;
+
+typedef block_gf<dlr_imtime, matrix_valued> b_g_Dt_t;
+typedef b_g_Dt_t::view_type b_g_Dt_vt;  
+typedef b_g_Dt_t::const_view_type b_g_Dt_cvt;
   
 /// Container type of one-particle Green and Vertex functions in Matsubara
 //using g_iw_t = gf<imfreq, matrix_valued>;
