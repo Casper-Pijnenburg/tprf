@@ -49,7 +49,7 @@ class GWSolver():
                 self.sigma += self.fock_self_energy(self.g_w, self.V)
             if self.gw:
                 self.P = self.polarization(self.g_w)
-                self.W = self.screened_potential(self.P, self.V)
+                self.W = self.screened_potential(self.P.copy(), self.V)
                 self.sigma += self.dyn_self_energy(self.g_w, self.W, self.V)
 
             self.g_w, self.mu = self.dyson_equation(self.g0_w, 0.0, sigma_w = self.sigma, N_fix = self.N_fix)
