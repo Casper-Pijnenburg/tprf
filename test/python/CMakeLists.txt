@@ -56,6 +56,9 @@ set(all_tests
   eliashberg/symmetrize_delta
   eliashberg/compare_dlr_and_direct
   eliashberg/dlr_eliashberg_solver
+  gw_real_space_exact
+  gw_real_space_momentum
+  gw_real_space_non_local
 )
 
 foreach(test ${all_tests})
