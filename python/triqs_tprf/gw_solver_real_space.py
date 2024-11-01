@@ -23,6 +23,49 @@ from triqs_tprf.ase_timing import Timer, timer
 
 class GWSolver():
     
+    """ Real-space GW solver for density-density interactions.
+
+    Parameters
+    ----------
+
+    g0_w : TRIQS Block Greens function on a DLR imaginary frequency mesh
+        The Green's function must have 2 blocks, corresponding with spin-up and spin-down
+        The DLR imaginary frequency mesh has to have the symmetrize flag set to True
+
+    Vij : 2D Numpy array
+        2D Numpy array that stores the density-density interaction Vij
+
+    hartree : Bool
+        Flag to include the hartree self-energy
+
+    fock : Bool
+        Flag to include the fock self-energy        
+
+    gw : Bool
+        Flag to include the dynamical self-energy
+
+    spinless : Bool
+        Flag to not enforce Pauli's exclusion principle by setting the interaction to zero for equal orbital and spin indices
+
+    N_fix : float or False
+        Speficy the desired occupation for the chemical potential fixer
+        Set to false for no chemical potential fixing   
+
+    N_tol : float
+        Tolerance when fixing the chemical potential
+
+    maxiter : int
+        Set maximum number of iterations.
+        1 corresponds to a one-shot GW calculation
+
+    tol : float
+        Tolerence between subsequent GW iterations before termination
+
+    verbose : bool
+        Whether or not to print out time information
+
+    """
+    
     def __init__(self, g0_w, V, hartree = True, fock = True, gw = True, spinless = False, N_fix = False, N_tol = 1e-5, maxiter = 1, tol = 1e-5, verbose = False):
 
         self.timer = Timer()
